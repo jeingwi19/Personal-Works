@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Testing </title>
+  <style>
+    *{margin: 0;padding: 0;}
+  </style>
+  <script src="assets/js/p5.min.js"></script>
+</head>
+<body>
+  
+  <script>
+    let angle = 0;
+    let heart;
+
+    function preload() {
+      heart = loadModel('assets/obj/heart.obj', true);
+
+    }
+
+    function setup() {
+      createCanvas(windowWidth, windowHeight, WEBGL);
+    }
+
+    function draw() {
+      background(20);
+      scale(1);
+      rotateX(frameCount * 0.01);
+      rotateY(frameCount * 0.01);
+      normalMaterial();
+      model(heart);
+    }
+  </script>
+</body>
+</html>
