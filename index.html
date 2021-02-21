@@ -7,32 +7,12 @@
   <title> Testing </title>
   <style>
     *{margin: 0;padding: 0;}
+    body{background: #222;}
+    main{height: 100%;}
   </style>
-  <script src="assets/js/p5.min.js"></script>
 </head>
 <body>
-  
-  <script>
-    let angle = 0;
-    let heart;
-
-    function preload() {
-      heart = loadModel('assets/obj/heart.obj', true);
-
-    }
-
-    function setup() {
-      createCanvas(windowWidth, windowHeight, WEBGL);
-    }
-
-    function draw() {
-      background(20);
-      scale(1);
-      rotateX(frameCount * 0.01);
-      rotateY(frameCount * 0.01);
-      normalMaterial();
-      model(heart);
-    }
-  </script>
+  <script src="assets/js/p5.min.js"></script>
+  <script src="assets/js/canvas.js"></script>
 </body>
 </html>
